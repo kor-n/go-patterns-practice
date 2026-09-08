@@ -1,0 +1,31 @@
+version: "2"
+
+linters:
+  enable:
+    - bodyclose
+    - copyloopvar
+    - errorlint
+    - intrange
+    - misspell
+    - nilerr
+    - revive
+    - unconvert
+    - usetesting
+    - wastedassign
+  settings:
+    revive:
+      rules:
+        - name: unused-parameter
+          disabled: true
+        - name: empty-block
+          disabled: true
+  exclusions:
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+
+formatters:
+  enable:
+    - gofumpt
